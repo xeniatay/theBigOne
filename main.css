@@ -2,3 +2,38 @@
  * Styles for index.html
 ***/
 
+.main-container {
+  max-width: 800px;
+  min-width: 320px;
+  background: red;
+}
+
+button {
+  cursor: pointer;
+  width: 120px;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.button-amazing {
+  height: 103px;
+  background-image: url(./img/swagpoosh_scarf_inline.png);
+  background-size: 592px 103px;
+  background-position: -7px -7px;
+
+  animation: swagpoosh .6s steps(4) infinite;
+}
+
+.button-surprise-me {
+  height: 119px;
+  background-image: url(./img/paw_scarf.png);
+  background-size: 284px 282px;
+  background-position: -11px -11px;
+}
+
+@keyframes swagpoosh {
+  0% { background-position: -7px -7px; }
+  /*25% { background-position: -273px -7px; }*/
+  /*75% { background-position: -305px -7px; }*/
+  100% { background-position: -599px -7px; }
+}
