@@ -5,35 +5,60 @@
 .main-container {
   max-width: 800px;
   min-width: 320px;
-  background: red;
+  padding: 10px;
+  background: #EFEFEF;
+  margin: 0 auto;
+  text-align: center;
 }
 
 button {
+  display: block;
+  margin: 20px auto;
+  height: 300px;
+  width: 300px;
   cursor: pointer;
-  width: 120px;
   background-repeat: no-repeat;
   background-color: white;
+  border: 0px solid #2f2f2f;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .button-amazing {
-  height: 103px;
-  background-image: url(./img/swagpoosh_scarf_inline.png);
-  background-size: 592px 103px;
-  background-position: -7px -7px;
+  padding: 55px 0 0 24px;
+}
 
-  animation: swagpoosh .6s steps(4) infinite;
+.amazing-poosh {
+  max-width: 265px;
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/swagpoosh_scarf_inline_2x.png);
+  background-size: 1073px 206px;
+  background-position: 0px -7px;
+  background-repeat: no-repeat;
+  animation: swagpoosh .7s steps(4) infinite;
 }
 
 .button-surprise-me {
-  height: 119px;
-  background-image: url(./img/paw_scarf.png);
-  background-size: 284px 282px;
-  background-position: -11px -11px;
+  padding: 25px 0 0 25px;
+}
+
+.paw-poosh {
+  width: 100%;
+  height: 100%;
+  background-image: url(./img/paw_scarf_2x.png);
+  background-size: 1400px 246px;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  animation: paw .6s steps(4) infinite;
 }
 
 @keyframes swagpoosh {
-  0% { background-position: -7px -7px; }
-  /*25% { background-position: -273px -7px; }*/
-  /*75% { background-position: -305px -7px; }*/
-  100% { background-position: -599px -7px; }
+  0% { background-position: 0px -7px; }
+  100% { background-position: -1082px -7px; }
+}
+
+@keyframes paw {
+ 0% { background-position: 0px 0x; }
+ 100% { background-position: -1540px 0px; }
 }
