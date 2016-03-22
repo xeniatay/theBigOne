@@ -6,8 +6,9 @@
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
   </head>
   <body>
-    <div class="main-container">
+    <div class="main-container loading">
       <div class="wrapper">
+        <div class="loader"></div>
         <form action="" method="post" class="button-container">
           <button class="amazing" type="button" onclick="play_amazing()">
             <span class="desc">Amazing</span>
@@ -35,6 +36,8 @@
             id: 'sound-' + i,
             preload:"auto"
           }).appendTo("body");
+
+          $('.main-container').removeClass('loading')
         }
       });
 
