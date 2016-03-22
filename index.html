@@ -12,13 +12,15 @@
       return Math.floor(Math.random() * mylist.length);
     }
     function play_amazing() {
-      var html_str = "<embed src='./waveclips/"+ amazing_list[randomize(amazing_list)]+"' autostart=true loop=false volume=100 hidden=true>";
+      var html_str = "<audio id='amazingsound'><source src='./waveclips/"+ amazing_list[randomize(amazing_list)]+"' type='audio/mpeg'></audio>";
       document.getElementById("amazing").innerHTML=html_str;
+      document.getElementById('amazingsound').play()
       return true;
     }
     function play_surprise () {
-      var html_str = "<embed src='./waveclips/"+ all_clips[randomize(all_clips)]+"' autostart=true loop=false volume=100 hidden=true>";
+      var html_str = "<audio id='surprisesound'><source src='./waveclips/"+ all_clips[randomize(all_clips)]+"' type='audio/mpeg'></audio>";
       document.getElementById("surprise").innerHTML=html_str;
+      document.getElementById('surprisesound').play()
       return true;
     }
     </script>
@@ -41,3 +43,4 @@
     <script src="main.js"></script>
   </body>
 </html>
+
