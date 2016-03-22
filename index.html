@@ -6,25 +6,6 @@
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
   </head>
   <body>
-    <script>
-    var amazing_list = ["I_have_a_lot_of_amazings.wav", "amazing_f_lol.wav", "amazing_loud.wav", "amazing_loud_round.wav", "amazing_nasaly.wav","amazing_short.wav","amazing_short_round.wav","amazing_short_soft.wav","amazing_soft.wav","amazing_soft_round.wav","maze.wav","the_big_one.wav","what_else_do_I_have.wav"]
-    var all_clips = ["I_have_a_lot_of_amazings.wav","amazing_f_lol.wav","amazing_loud.wav","amazing_loud_round.wav","amazing_nasaly.wav","amazing_short.wav","amazing_short_round.wav","amazing_short_soft.wav","amazing_soft.wav","amazing_soft_round.wav","baller.wav","ballin_hot_ball.wav","dawg01.wav","dawg02.wav","dawg03.wav","dawg_longer.wav","dawg_where_you_at.wav","drew_such_a_baller.wav","its_k_kosher.wav","its_pre_ballin.wav","klau.wav","maze.wav","sup.wav","the_big_one.wav","true_true.wav","umm.wav","what_else_do_I_have.wav","ye_bro.wav","ye_buddy.wav","your_face.wav"]
-    function randomize (mylist) {
-      return Math.floor(Math.random() * mylist.length);
-    }
-    function play_amazing() {
-      var html_str = "<audio id='amazingsound'><source src='./waveclips/"+ amazing_list[randomize(amazing_list)]+"' type='audio/mpeg' preload='auto'></audio>";
-      document.getElementById("amazing").innerHTML=html_str;
-      document.getElementById('amazingsound').play()
-      return true;
-    }
-    function play_surprise () {
-      var html_str = "<audio id='surprisesound'><source src='./waveclips/"+ all_clips[randomize(all_clips)]+"' type='audio/mpeg' preload='auto'></audio>";
-      document.getElementById("surprise").innerHTML=html_str;
-      document.getElementById('surprisesound').play()
-      return true;
-    }
-    </script>
     <div class="main-container">
       <div class="wrapper">
         <form action="" method="post" class="button-container">
@@ -41,9 +22,42 @@
         </form>
       </div>
     </div>
+
     <!-- Placed at the end of the document so the pages load faster -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <script src="main.js"></script>
+    <script>
+      $(document).ready(function() {
+        for (var i = 0; i < all_clips.length; i++) {
+          $("<audio>", {
+            src: './waveclips/' + all_clips[i],
+            id: 'sound-' + i,
+            preload:"auto"
+          }).appendTo("body");
+        }
+      });
+
+      var amazing_list = ["I_have_a_lot_of_amazings.wav", "amazing_f_lol.wav", "amazing_loud.wav", "amazing_loud_round.wav", "amazing_nasaly.wav","amazing_short.wav","amazing_short_round.wav","amazing_short_soft.wav","amazing_soft.wav","amazing_soft_round.wav","maze.wav","the_big_one.wav","what_else_do_I_have.wav"]
+
+      var all_clips = ["I_have_a_lot_of_amazings.wav","amazing_f_lol.wav","amazing_loud.wav","amazing_loud_round.wav","amazing_nasaly.wav","amazing_short.wav","amazing_short_round.wav","amazing_short_soft.wav","amazing_soft.wav","amazing_soft_round.wav","baller.wav","ballin_hot_ball.wav","dawg01.wav","dawg02.wav","dawg03.wav","dawg_longer.wav","dawg_where_you_at.wav","drew_such_a_baller.wav","its_k_kosher.wav","its_pre_ballin.wav","klau.wav","maze.wav","sup.wav","the_big_one.wav","true_true.wav","umm.wav","what_else_do_I_have.wav","ye_bro.wav","ye_buddy.wav","your_face.wav"]
+
+      function randomize (mylist) {
+        return Math.floor(Math.random() * mylist.length);
+      }
+
+      function play_amazing() {
+        var random = amazing_list[randomize(amazing_list)]
+        var index = all_clips.indexOf(random)
+
+        document.getElementById('sound-' + index).play()
+      }
+
+      function play_surprise () {
+        var random = randomize(all_clips)
+        document.getElementById('sound-' + random).play()
+      }
+    </script>
   </body>
 </html>
 

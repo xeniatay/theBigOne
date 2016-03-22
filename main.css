@@ -15,7 +15,7 @@ body {
   display: table;
   height: 100%;
   width: 100%;
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
   text-align: center;
 }
@@ -29,18 +29,10 @@ body {
   position: relative;
   display: inline-block;
   margin: 5%;
-  height: 250px;
-  width: 250px;
+  width: 39%;
+  height: 0;
+  padding-bottom: 39%;
   box-sizing: border-box;
-}
-
-@media (max-width: 320px) {
-  .button-container {
-    width: 80%;
-    height: 0;
-    margin: 5% auto;
-    padding-bottom: 80%;
-  }
 }
 
 button {
@@ -100,4 +92,19 @@ button:active {
   background-image: url(./img/gif_paw_scarf_2x.gif);
   background-size: 80%;
   background-position: center 30%;
+}
+
+@media (max-width: 565px) {
+  .desc {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .button-container {
+    width: 80%;
+    height: 0;
+    margin: 5% auto;
+    padding-bottom: 80%;
+  }
 }
