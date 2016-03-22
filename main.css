@@ -60,19 +60,19 @@ button {
   outline: none;
 
   /* shadow */
-  box-shadow: 0 10px 5px #6f6f6f;
+  box-shadow: 0 10px 5px #02719b;
   -webkit-transition: all .05s linear;
   -moz-transition: all .05s linear;
   transition: all .05s linear;
 }
 
 button:hover {
-  box-shadow: 0 6px 5px #6f6f6f;
+  box-shadow: 0 6px 5px #005b7d;
   top: 5px;
 }
 
 button:active {
-  box-shadow: 0 0 5px #6f6f6f;
+  box-shadow: 0 0 5px #005b7d;
   top: 10px;
 }
 
