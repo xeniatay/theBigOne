@@ -76,12 +76,28 @@ button:active {
   top: 10px;
 }
 
+.desc {
+  position: absolute;
+  display: block;
+  left: 0;
+  right: 0;
+  bottom: 9%;
+  margin: 0 auto;
+  letter-spacing: .2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: 'Courier New', monospace;
+}
+
 .amazing {
   background-image: url(./img/gif_swagpoosh_scarf_inline_2x.gif);
-  background-position: 5px 55%;
+  background-size: 90%;
+  background-position: 70% center;
 }
 
 .surprise-me {
   background-image: url(./img/gif_paw_scarf_2x.gif);
-  background-position: 0 120%;
+  background-size: 80%;
+  background-position: center 30%;
 }
