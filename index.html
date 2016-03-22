@@ -3,6 +3,7 @@
   <head>
     <title>Kevin</title>
     <link href="main.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
   </head>
   <body>
     <script>
@@ -12,13 +13,13 @@
       return Math.floor(Math.random() * mylist.length);
     }
     function play_amazing() {
-      var html_str = "<audio id='amazingsound'><source src='./waveclips/"+ amazing_list[randomize(amazing_list)]+"' type='audio/mpeg'></audio>";
+      var html_str = "<audio id='amazingsound'><source src='./waveclips/"+ amazing_list[randomize(amazing_list)]+"' type='audio/mpeg' preload='auto'></audio>";
       document.getElementById("amazing").innerHTML=html_str;
       document.getElementById('amazingsound').play()
       return true;
     }
     function play_surprise () {
-      var html_str = "<audio id='surprisesound'><source src='./waveclips/"+ all_clips[randomize(all_clips)]+"' type='audio/mpeg'></audio>";
+      var html_str = "<audio id='surprisesound'><source src='./waveclips/"+ all_clips[randomize(all_clips)]+"' type='audio/mpeg' preload='auto'></audio>";
       document.getElementById("surprise").innerHTML=html_str;
       document.getElementById('surprisesound').play()
       return true;
