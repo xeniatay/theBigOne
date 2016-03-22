@@ -25,18 +25,18 @@
     }
     </script>
     <div class="main-container">
-      <form action="" method="post">
-        <button class="button-amazing" type="button" onclick="play_amazing()">
-          <div class="amazing-poosh"></div>
-        </button>
-        <div id="amazing"></div>
-      </form>
-      <form action="" method="post">
-        <button class="button-surprise-me" type="button" onclick="play_surprise()">
-          <div class="paw-poosh"></div>
-        </button>
-        <div id="surprise"></div>
-      </form>
+      <div class="wrapper">
+        <form action="" method="post" class="button-container">
+          <button class="amazing" type="button" onclick="play_amazing()">
+          </button>
+          <div id="amazing"></div>
+        </form>
+        <form action="" method="post" class="button-container">
+          <button class="surprise-me" type="button" onclick="play_surprise()">
+          </button>
+          <div id="surprise"></div>
+        </form>
+      </div>
     </div>
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
