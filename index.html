@@ -32,7 +32,7 @@
       $(document).ready(function() {
         for (var i = 0; i < all_clips.length; i++) {
           $("<audio>", {
-            src: './waveclips/' + all_clips[i],
+            src: 'data:audio/wav;base64,' + sound_files[all_clips[i]],
             id: 'sound-' + i,
             preload:"auto"
           }).appendTo("body");
@@ -61,6 +61,7 @@
         document.getElementById('sound-' + random).play()
       }
     </script>
+    <script src="sounds.js" type="text/javascript"></script>
   </body>
 </html>
 
