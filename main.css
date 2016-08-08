@@ -94,6 +94,18 @@ button:active {
   background-position: center 30%;
 }
 
+.heart-heart-heart {
+  background-image: url(./img/heartpoosh.gif);
+  background-size: 70%;
+  background-position: center 10px;
+}
+
+.real-men {
+  background-image: url(./img/swagpoosh_crying.gif);
+  background-size: 100%;
+  background-position: 20px 70px;
+}
+
 @media (max-width: 565px) {
   .desc {
     font-size: 10px;
